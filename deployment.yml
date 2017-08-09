@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: test-app
+spec:
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        k8s-app: test-app
+    spec:
+      containers:
+      - name: test-app
+        image: test-app:latest
+        ports:
+        - containerPort: 8000

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    k8s-app: test-app
+  name: test-app
+spec:
+  type: NodePort
+  ports:
+  - port: 8000
+  selector:
+    k8s-app: test-app
